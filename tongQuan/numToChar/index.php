@@ -18,8 +18,8 @@
             $numInp = $_POST["number"];
         }
         $charOfNum = '';
-
-        if ( floor($numInp / 10) == 0) {
+        // Convert from 0 to 9 :
+        if (floor($numInp / 10) == 0) {
             switch ($numInp) {
                 case '0': {
                         $charOfNum = 'zero';
@@ -63,7 +63,8 @@
                     }
             }
         }
-        if ( floor($numInp / 10) == 1 ) {
+        // Convert from 10 to 19 :
+        if (floor($numInp / 10) == 1) {
             switch ($numInp) {
                 case '10': {
                         $charOfNum = 'ten';
@@ -107,8 +108,8 @@
                     }
             }
         }
-
-           $arrNum = array(
+        // Convert from 20 to 99 :
+        $arrNum = array(
             "0" => "",
             "1" => " one",
             "2" => " two",
@@ -120,63 +121,64 @@
             "8" => " eight",
             "9" => " nine"
         );
-        if ( floor($numInp / 10) > 1 & floor($numInp / 10) < 10 ) {
+        if (floor($numInp / 10) > 1 & floor($numInp / 10) < 10) {
             $numInp1 = floor($numInp / 10);
             $numInp2 = $numInp % 10;
             foreach ($arrNum as $num => $char) {
-                    if ($num == $numInp2) {
-                         $char2 = $char;
-                    }
+                if ($num == $numInp2) {
+                    $char2 = $char;
                 }
-            
+            }
+
             switch ($numInp1) {
                 case '2': {
-                        $charOfNum = 'twenty'.$char2;
+                        $charOfNum = 'twenty' . $char2;
                         break;
                     }
                 case '3': {
-                        $charOfNum = 'thirsty'.$char2;
+                        $charOfNum = 'thirsty' . $char2;
                         break;
                     }
                 case '4': {
-                        $charOfNum = 'fourty'.$char2;
+                        $charOfNum = 'fourty' . $char2;
                         break;
                     }
                 case '5': {
-                        $charOfNum = 'fifty'.$char2;
+                        $charOfNum = 'fifty' . $char2;
                         break;
                     }
                 case '6': {
-                        $charOfNum = 'sixty'.$char2;
+                        $charOfNum = 'sixty' . $char2;
                         break;
                     }
                 case '7': {
-                        $charOfNum = 'seventy'.$char2;
+                        $charOfNum = 'seventy' . $char2;
                         break;
                     }
                 case '8': {
-                        $charOfNum = 'eighty'.$char2;
+                        $charOfNum = 'eighty' . $char2;
                         break;
                     }
                 case '9': {
-                        $charOfNum = 'ninety'.$char2;
+                        $charOfNum = 'ninety' . $char2;
                         break;
                     }
             }
         }
-        if ( floor($numInp / 10) >= 10 & floor($numInp / 10) < 100 ) {
+        // Convert from 100 to 999 :
+        if (floor($numInp / 10) >= 10 & floor($numInp / 10) < 100) {
             $numInp1 = floor($numInp / 100);
             $numInp2 = $numInp % 100;
-            $numInp2 = floor($numInp2 /10);
+            $numInp2 = floor($numInp2 / 10);
             $numInp3 = $numInp % 100;
-            $numInp3 = floor($numInp3 %10);
-           
-            
+            $numInp3 = floor($numInp3 % 10);
+
+
             switch ($numInp1) {
                 case '1': {
-                    $charOfNum = 'one hundred';
-                    break;
-                }
+                        $charOfNum = 'one hundred';
+                        break;
+                    }
                 case '2': {
                         $charOfNum = 'two hundred';
                         break;
@@ -210,62 +212,91 @@
                         break;
                     }
             }
-             foreach ($arrNum as $num => $char) {
-                    if ($num == $numInp3) {
-                         $char3 = $char;
-                    }
+            foreach ($arrNum as $num => $char) {
+                if ($num == $numInp3) {
+                    $char3 = $char;
                 }
+            }
             switch ($numInp2) {
                 case '0': {
-                    $charOfNum = $charOfNum.$char3;
-                    break;
-                }
-                case '1': {
-                    switch($char3)
-                    {   
-                        case '': {$charOfNum = $charOfNum.' ten'; break;}
-                        case ' one': {$charOfNum = $charOfNum.' eleven'; break;}
-                        case ' two': {$charOfNum = $charOfNum.' twelve'; break;}
-                        case ' three': {$charOfNum = $charOfNum.' thirdteen'; break;}
-                        case ' four': {$charOfNum = $charOfNum.' fourteen'; break;}
-                        case ' five': {$charOfNum = $charOfNum.' fifteen'; break;}
-                        case ' six': {$charOfNum = $charOfNum.' sisteen'; break;}
-                        case ' seven': {$charOfNum = $charOfNum.' seventeen'; break;}
-                        case ' eight': {$charOfNum = $charOfNum.' eighteen'; break;}
-                        case ' nine': {$charOfNum = $charOfNum.' nineteen'; break;}
+                        $charOfNum = $charOfNum . $char3;
+                        break;
                     }
-                    break;
-                }
+                case '1': {
+                        switch ($char3) {
+                            case '': {
+                                    $charOfNum = $charOfNum . ' ten';
+                                    break;
+                                }
+                            case ' one': {
+                                    $charOfNum = $charOfNum . ' eleven';
+                                    break;
+                                }
+                            case ' two': {
+                                    $charOfNum = $charOfNum . ' twelve';
+                                    break;
+                                }
+                            case ' three': {
+                                    $charOfNum = $charOfNum . ' thirdteen';
+                                    break;
+                                }
+                            case ' four': {
+                                    $charOfNum = $charOfNum . ' fourteen';
+                                    break;
+                                }
+                            case ' five': {
+                                    $charOfNum = $charOfNum . ' fifteen';
+                                    break;
+                                }
+                            case ' six': {
+                                    $charOfNum = $charOfNum . ' sisteen';
+                                    break;
+                                }
+                            case ' seven': {
+                                    $charOfNum = $charOfNum . ' seventeen';
+                                    break;
+                                }
+                            case ' eight': {
+                                    $charOfNum = $charOfNum . ' eighteen';
+                                    break;
+                                }
+                            case ' nine': {
+                                    $charOfNum = $charOfNum . ' nineteen';
+                                    break;
+                                }
+                        }
+                        break;
+                    }
                 case '2': {
-                        $charOfNum = $charOfNum.' twenty '.$char3;
+                        $charOfNum = $charOfNum . ' twenty ' . $char3;
                         break;
                     }
                 case '3': {
-                        $charOfNum = $charOfNum.' thirsty '.$char3;
+                        $charOfNum = $charOfNum . ' thirsty ' . $char3;
                         break;
                     }
                 case '4': {
-                        $charOfNum = $charOfNum.' fourty '.$char3;
+                        $charOfNum = $charOfNum . ' fourty ' . $char3;
                         break;
                     }
                 case '5': {
-                        $charOfNum = $charOfNum.' fifty '.$char3;
+                        $charOfNum = $charOfNum . ' fifty ' . $char3;
                         break;
                     }
                 case '6': {
-                        $charOfNum = $charOfNum.' sisty '.$char3;
+                        $charOfNum = $charOfNum . ' sisty ' . $char3;
                         break;
                     }
                 case '7': {
-                        $charOfNum = $charOfNum.' seventy '.$char3;
+                        $charOfNum = $charOfNum . ' seventy ' . $char3;
                         break;
                     }
                 case '8': {
-                        $charOfNum = $charOfNum.' eighty '.$char3;
+                        $charOfNum = $charOfNum . ' eighty ' . $char3;
                         break;
                     }
                 case '9': {
-                        $charOfNum = $charOfNum.' ninety '.$char3;
+                        $charOfNum = $charOfNum . ' ninety ' . $char3;
                         break;
                     }
             }
@@ -273,82 +304,6 @@
 
         echo "<br/><br/>";
         echo "Số " . $numInp . " đọc là: " . $charOfNum;
-     
-
-        // if ($numInp / 100 > 1) {
-        //     $num3char = $numInp;
-        // } else {
-        //     if ($numInp / 10 > 1) {
-        //         $num2char = $numInp;
-        //     } else {
-        //         $num1char = $numInp;
-        //     }
-        // }
-        // switch ($numInp) {
-        //     case $num1char: {
-        //             foreach ($arrNum as $num => $char) {
-        //                 if ($num == $numInp) {
-        //                     $charOfNum = $char;
-        //                 }
-        //             }
-        //         }
-        //     case $num2char: {
-        //             if ($numInp == '10') {
-        //                 $charOfNum = 'ten';
-        //             }
-        //             if ($numInp == '11') {
-        //                 $charOfNum = 'eleven';
-        //             }
-        //             if ($numInp == '12') {
-        //                 $charOfNum = 'twelve';
-        //             }
-        //             if ($numInp > 12 & $numInp < 20) {
-        //                 $numInp1 = $numInp % 10;
-        //                 $numInp2 = $numInp / 10;
-        //                 foreach ($arrNum as $num1 => $char1) {
-        //                     if ($num1 == $numInp1) {
-        //                         $charOfNum1 = $char1;
-        //                     }
-        //                 }
-        //                 switch ($numInp2) {
-        //                     case '1':
-        //                         $charOfNum = $char1 . 'teen';
-        //                 }
-        //             }
-        //         }
-        // }
-
-
-
-
-        // if ($num2char == $numInp) {
-        //     if ($numInp == '10') {
-        //         $char = 'ten';
-        //         echo "<br/><br/>";
-        //         echo "Số " . $numInp . " đọc là: " . $char;
-        //     }
-        //     if ($numInp == '11') {
-        //         $char = 'eleven';
-        //         echo "<br/><br/>";
-        //         echo "Số " . $numInp . " đọc là: " . $char;
-        //     }
-        //     if ($numInp == '12') {
-        //         $char = 'twelve';
-        //         echo "<br/><br/>";
-        //         echo "Số " . $numInp . " đọc là: " . $char;
-        //     }
-        // }
-
-
-
-        // if($numInp <10){
-        // foreach ($arrNum as $num => $char) {
-        //     if ($num == $numInp) {
-        //         echo "<br/><br/>";
-        //         echo "Số " . $numInp . " đọc là: " . $char;  
-        //     }
-        // }}
-
 
         ?>
     </form>
