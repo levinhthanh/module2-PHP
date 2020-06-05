@@ -58,7 +58,7 @@
         $operator = $_GET["operator"];
     }
     
-    $result = calculator($num1, $num2, $operator);
+    
     
         function calculator($num1, $num2, $operator)
         {
@@ -80,6 +80,7 @@
         }
    
     try {
+        $result = calculator($num1, $num2, $operator);
         echo '<h1>Result:</h1>';
         if ($operator == 'add') $opr = ' + ';
         if ($operator == 'sub') $opr = ' - ';
@@ -87,7 +88,7 @@
         if ($operator == 'div') $opr = ' / ';
         echo $num1.$opr.$num2.' = '.$result;
     } catch (Exception $e) {
-        echo $e;
+        echo 'Message: ' .$e->getMessage();
     }
     ?>
 </body>
