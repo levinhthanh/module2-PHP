@@ -1,0 +1,58 @@
+[Tue Jun 02 19:39:55.154949 2020] [ssl:warn] [pid 7152:tid 644] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:39:55.264315 2020] [ssl:warn] [pid 7152:tid 644] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:39:56.452126 2020] [mpm_winnt:notice] [pid 7152:tid 644] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Tue Jun 02 19:39:56.452126 2020] [mpm_winnt:notice] [pid 7152:tid 644] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Tue Jun 02 19:39:56.452126 2020] [core:notice] [pid 7152:tid 644] AH00094: Command line: 'C:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Tue Jun 02 19:39:56.452126 2020] [mpm_winnt:notice] [pid 7152:tid 644] AH00418: Parent: Created child process 3304
+[Tue Jun 02 19:39:57.217882 2020] [ssl:warn] [pid 3304:tid 640] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:39:57.311679 2020] [ssl:warn] [pid 3304:tid 640] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:39:57.421004 2020] [mpm_winnt:notice] [pid 3304:tid 640] AH00354: Child: Starting 150 worker threads.
+[Tue Jun 02 19:42:03.697126 2020] [ssl:warn] [pid 9632:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:42:03.806494 2020] [ssl:warn] [pid 9632:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:42:03.853365 2020] [mpm_winnt:notice] [pid 9632:tid 652] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Tue Jun 02 19:42:03.853365 2020] [mpm_winnt:notice] [pid 9632:tid 652] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Tue Jun 02 19:42:03.853365 2020] [core:notice] [pid 9632:tid 652] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Tue Jun 02 19:42:03.853365 2020] [mpm_winnt:notice] [pid 9632:tid 652] AH00418: Parent: Created child process 2776
+[Tue Jun 02 19:42:04.743931 2020] [ssl:warn] [pid 2776:tid 572] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:42:04.822063 2020] [ssl:warn] [pid 2776:tid 572] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:42:04.872010 2020] [mpm_winnt:notice] [pid 2776:tid 572] AH00354: Child: Starting 150 worker threads.
+[Tue Jun 02 19:44:12.405404 2020] [ssl:warn] [pid 7480:tid 672] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:44:12.530418 2020] [core:warn] [pid 7480:tid 672] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Jun 02 19:44:12.546002 2020] [ssl:warn] [pid 7480:tid 672] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:44:12.592892 2020] [mpm_winnt:notice] [pid 7480:tid 672] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Tue Jun 02 19:44:12.592892 2020] [mpm_winnt:notice] [pid 7480:tid 672] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Tue Jun 02 19:44:12.592892 2020] [core:notice] [pid 7480:tid 672] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Tue Jun 02 19:44:12.592892 2020] [mpm_winnt:notice] [pid 7480:tid 672] AH00418: Parent: Created child process 7688
+[Tue Jun 02 19:44:13.421123 2020] [ssl:warn] [pid 7688:tid 676] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:44:13.514884 2020] [ssl:warn] [pid 7688:tid 676] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Tue Jun 02 19:44:13.561719 2020] [mpm_winnt:notice] [pid 7688:tid 676] AH00354: Child: Starting 150 worker threads.
+[Wed Jun 03 09:27:21.348760 2020] [ssl:warn] [pid 5108:tid 672] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 09:27:21.458130 2020] [core:warn] [pid 5108:tid 672] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jun 03 09:27:21.473752 2020] [ssl:warn] [pid 5108:tid 672] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 09:27:22.755140 2020] [mpm_winnt:notice] [pid 5108:tid 672] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Wed Jun 03 09:27:22.755140 2020] [mpm_winnt:notice] [pid 5108:tid 672] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Wed Jun 03 09:27:22.755140 2020] [core:notice] [pid 5108:tid 672] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Wed Jun 03 09:27:22.770759 2020] [mpm_winnt:notice] [pid 5108:tid 672] AH00418: Parent: Created child process 5940
+[Wed Jun 03 09:27:23.614649 2020] [ssl:warn] [pid 5940:tid 556] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 09:27:23.708440 2020] [ssl:warn] [pid 5940:tid 556] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 09:27:23.755275 2020] [mpm_winnt:notice] [pid 5940:tid 556] AH00354: Child: Starting 150 worker threads.
+[Wed Jun 03 11:00:40.220155 2020] [ssl:warn] [pid 10444:tid 632] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 11:00:40.336619 2020] [core:warn] [pid 10444:tid 632] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Jun 03 11:00:40.350614 2020] [ssl:warn] [pid 10444:tid 632] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 11:00:40.538017 2020] [mpm_winnt:notice] [pid 10444:tid 632] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Wed Jun 03 11:00:40.538017 2020] [mpm_winnt:notice] [pid 10444:tid 632] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Wed Jun 03 11:00:40.538017 2020] [core:notice] [pid 10444:tid 632] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Wed Jun 03 11:00:40.542014 2020] [mpm_winnt:notice] [pid 10444:tid 632] AH00418: Parent: Created child process 4248
+[Wed Jun 03 11:00:41.237948 2020] [ssl:warn] [pid 4248:tid 636] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 11:00:41.339811 2020] [ssl:warn] [pid 4248:tid 636] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Wed Jun 03 11:00:41.426761 2020] [mpm_winnt:notice] [pid 4248:tid 636] AH00354: Child: Starting 150 worker threads.
+[Fri Jun 05 09:02:57.117307 2020] [ssl:warn] [pid 9892:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 05 09:02:57.299104 2020] [core:warn] [pid 9892:tid 652] AH00098: pid file C:/xampp/apache/logs/httpd.pid overwritten -- Unclean shutdown of previous Apache run?
+[Fri Jun 05 09:02:57.308377 2020] [ssl:warn] [pid 9892:tid 652] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 05 09:02:57.632267 2020] [mpm_winnt:notice] [pid 9892:tid 652] AH00455: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6 configured -- resuming normal operations
+[Fri Jun 05 09:02:57.632267 2020] [mpm_winnt:notice] [pid 9892:tid 652] AH00456: Apache Lounge VC15 Server built: Apr 22 2020 11:11:00
+[Fri Jun 05 09:02:57.632267 2020] [core:notice] [pid 9892:tid 652] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Fri Jun 05 09:02:57.636773 2020] [mpm_winnt:notice] [pid 9892:tid 652] AH00418: Parent: Created child process 5000
+[Fri Jun 05 09:02:58.336660 2020] [ssl:warn] [pid 5000:tid 636] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 05 09:02:58.430291 2020] [ssl:warn] [pid 5000:tid 636] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Fri Jun 05 09:02:58.490752 2020] [mpm_winnt:notice] [pid 5000:tid 636] AH00354: Child: Starting 150 worker threads.
