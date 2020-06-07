@@ -76,7 +76,7 @@
             }
             public function getRoot1()
             {    
-                $delta = ($this->b * $this->b) - 4 * $this->a * $this->c;
+                $delta = $this->getDiscriminant();
                 if($delta < 0) {
                     return 0;
                 }
@@ -89,7 +89,7 @@
             }
             public function getRoot2()
             {    
-                $delta = ($this->b * $this->b) - 4 * $this->a * $this->c;
+                $delta = $this->getDiscriminant();
                 if($delta < 0) {
                     return 0;
                 }
