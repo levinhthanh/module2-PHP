@@ -11,19 +11,16 @@
     <?php
     class Fan
     {
-        public $SLOW;
-        public $MEDIUM;
-        public $FAST;
+        public const SLOW = 1;
+        public const MEDIUM = 2;
+        public const FAST =3 ;
         private $speed;
         private $on;
         private $radius;
         private $color;
         public function __construct()
         {
-            $this->SLOW = 1;
-            $this->MEDIUM = 2;
-            $this->FAST = 3;
-            $this->speed = (int) $this->SLOW;
+            $this->speed = self::SLOW;
             $this->on = (boolean) false;
             $this->radius = (float) 5;
             $this->color = (string) 'blue';
@@ -71,14 +68,14 @@
     }
 
     $fan1 = new Fan;
-    $fan1->setSpeed($fan1->FAST);
+    $fan1->setSpeed($fan1::FAST);
     $fan1->setRadius(10);
     $fan1->setColor('yellow');
     $fan1->setOn();
     echo $fan1->toString();
     echo '<br>';
     $fan2 = new Fan;
-    $fan2->setSpeed($fan2->MEDIUM);
+    $fan2->setSpeed($fan2::MEDIUM);
     $fan2->setRadius(5);
     $fan2->setColor('blue');
     echo $fan2->toString();
