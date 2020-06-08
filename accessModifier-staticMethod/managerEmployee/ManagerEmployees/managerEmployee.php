@@ -3,20 +3,20 @@ namespace Manager;
 
 class EmployeeManager
 {
-    private $employees;
+    private static $employees;
 
     public function __construct()
     {
-        $this->employees = [];
+        self::$employees = [];
     }
 
-    public function addEmployee($employee) {
-        $this->employees[] = $employee;
+    public static function addEmployee($employee) {
+        self::$employees[] = $employee;
     }
 
-    public function getEmployees()
+    public static function getEmployees()
     {
-        return $this->employees;
+        return  self::$employees;
     }
 }
 ?>
