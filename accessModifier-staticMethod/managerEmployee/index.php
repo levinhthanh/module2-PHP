@@ -88,15 +88,28 @@
             $address = $_POST['address'];
             $possition = $_POST['possition'];
 
+            $employee = new Employee($fname, $lname, $birthday,  $address, $possition);
+            $employeeManager->addEmployee( $employee);
+            $employeeArray = $employeeManager->getEmployees();
 
-            $employeeManager->addEmployee(new Employee($fname, $lname, $birthday,  $address, $possition));
-            $employees = $employeeManager->getEmployees();
+            $dataJson = file_get_contents('data.json');
+            $dataArray = json_decode($dataJson);
 
+            for($i = 0; $i < count($employeeArray); $i++)
+            {
+                $tmp = $employeeArray[$i];
+                $arr = [$tmp->getFirstName(), $tmp->getLastName(),$tmp->getBirthday(), $tmp->getAddress(), $tmp->getPossition()];
+                array_push($dataArray, $arr);
+            }
 
-            foreach ($employees  as $employee) {
-                echo "<tr id='table'><td id='table'>" . $employee->getFirstName() . "</td>" . "<td id='table'>" . $employee->getLastName() . "</td>"
-                    . "<td id='table'>" . $employee->getBirthday() . "</td>" . "<td id='table'>" . $employee->getAddress() . "</td>"
-                    . "<td id='table'>" . $employee->getPossition() . "</td></tr>";
+            $dataJson = json_encode($dataArray);
+            file_put_contents('data.json',$dataJson);
+            
+            for($i = 0; $i < count($dataArray); $i++)
+            {
+                echo "<tr id='table'><td id='table'>" . $dataArray[$i][0] . "</td>" . "<td id='table'>" . $dataArray[$i][1] . "</td>"
+                    . "<td id='table'>" . $dataArray[$i][2] . "</td>" . "<td id='table'>" . $dataArray[$i][3] . "</td>"
+                    . "<td id='table'>" .$dataArray[$i][4] . "</td></tr>";
             }
         }
 
