@@ -23,6 +23,7 @@
             background-color: burlywood;
             width: 450px;
             padding: 40px ;
+            margin-left: 330px;
         }
         #btn{
             margin-left: 180px;
