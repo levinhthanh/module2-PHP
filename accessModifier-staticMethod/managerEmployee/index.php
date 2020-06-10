@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manager Employee</title>
     <style>
-        input{
+        input {
             text-align: center;
         }
-        #table{
+
+        #table {
             width: 200px;
             border: solid 1px darkorange;
             text-align: center;
         }
-        table{
+
+        table {
             margin-left: 50px;
         }
 
-        form{
+        form {
             border: solid 1px darkorange;
             background-color: burlywood;
             width: 450px;
-            padding: 40px ;
+            padding: 40px;
             margin-left: 330px;
         }
-        #btn{
+
+        #btn {
             margin-left: 180px;
         }
-        #list{
+
+        #list {
             margin-left: 450px;
         }
     </style>
@@ -36,7 +40,7 @@
 
 <body>
     <br>
-    <form action="" method="post">
+    <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
         <h1>Nhập nhân viên vào danh sách</h1>
         <table>
             <tr>
@@ -82,37 +86,66 @@
         $employeeManager = new EmployeeManager();
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $fname = $_POST['firstName'];
-            $lname = $_POST['lastName'];
-            $birthday = $_POST['birthday'];
-            $address = $_POST['address'];
-            $possition = $_POST['possition'];
-
-            $employee = new Employee($fname, $lname, $birthday,  $address, $possition);
-            $employeeManager->addEmployee( $employee);
-            $employeeArray = $employeeManager->getEmployees();
-
-            $dataJson = file_get_contents('data.json');
-            $dataArray = json_decode($dataJson);
-
-            for($i = 0; $i < count($employeeArray); $i++)
-            {
-                $tmp = $employeeArray[$i];
-                $arr = [$tmp->getFirstName(), $tmp->getLastName(),$tmp->getBirthday(), $tmp->getAddress(), $tmp->getPossition()];
-                array_push($dataArray, $arr);
+            $check = 1;
+            if (!empty($_POST['firstName'])) {
+                $fname = $_POST['firstName'];
+            } else {
+                $check = 0;
             }
+            if (!empty($_POST['lastName'])) {
+                $lname = $_POST['lastName'];
+            } else {
+                $check = 0;
+            }
+            if (!empty($_POST['birthday'])) {
+                $birthday = $_POST['birthday'];
+            } else {
+                $check = 0;
+            }
+            if (!empty($_POST['address'])) {
+                $address = $_POST['address'];
+            } else {
+                $check = 0;
+            }
+            if (!empty($_POST['possition'])) {
+                $possition = $_POST['possition'];
+            } else {
+                $check = 0;
+            }
+            if ($check === 1) {
+                $employee = new Employee($fname, $lname, $birthday,  $address, $possition);
+                $employeeManager->addEmployee($employee);
+                $employeeArray = $employeeManager->getEmployees();
 
-            $dataJson = json_encode($dataArray);
-            file_put_contents('data.json',$dataJson);
-            
-            for($i = 0; $i < count($dataArray); $i++)
+                $dataJson = file_get_contents('data.json');
+                $dataArray = json_decode($dataJson);
+
+                for ($i = 0; $i < count($employeeArray); $i++) {
+                    $tmp = $employeeArray[$i];
+                    $arr = [$tmp->getFirstName(), $tmp->getLastName(), $tmp->getBirthday(), $tmp->getAddress(), $tmp->getPossition()];
+                    array_push($dataArray, $arr);
+                }
+
+                $dataJson = json_encode($dataArray);
+                file_put_contents('data.json', $dataJson);
+
+                for ($i = 0; $i < count($dataArray); $i++) {
+                    echo "<tr id='table'><td id='table'>" . $dataArray[$i][0] . "</td>" . "<td id='table'>" . $dataArray[$i][1] . "</td>"
+                        . "<td id='table'>" . $dataArray[$i][2] . "</td>" . "<td id='table'>" . $dataArray[$i][3] . "</td>"
+                        . "<td id='table'>" . $dataArray[$i][4] . "</td></tr>";
+                }
+            }
+            else
             {
-                echo "<tr id='table'><td id='table'>" . $dataArray[$i][0] . "</td>" . "<td id='table'>" . $dataArray[$i][1] . "</td>"
-                    . "<td id='table'>" . $dataArray[$i][2] . "</td>" . "<td id='table'>" . $dataArray[$i][3] . "</td>"
-                    . "<td id='table'>" .$dataArray[$i][4] . "</td></tr>";
+                $dataJson = file_get_contents('data.json');
+                $dataArray = json_decode($dataJson);
+                for ($i = 0; $i < count($dataArray); $i++) {
+                    echo "<tr id='table'><td id='table'>" . $dataArray[$i][0] . "</td>" . "<td id='table'>" . $dataArray[$i][1] . "</td>"
+                        . "<td id='table'>" . $dataArray[$i][2] . "</td>" . "<td id='table'>" . $dataArray[$i][3] . "</td>"
+                        . "<td id='table'>" . $dataArray[$i][4] . "</td></tr>";
+                }
             }
         }
-
         ?>
     </table>
 
