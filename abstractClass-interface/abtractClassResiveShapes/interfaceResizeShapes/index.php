@@ -19,7 +19,14 @@ echo "<br> Mảng chứa chu vi: <br>";
 print_r(Circle::$circlesPerimeter);
 echo Circle::minPerimeter();
 echo "<br> Tìm hình tròn có tên Hình tròn 3: <br>";
-echo Circle::findShape("Hình tròn 3");
+echo "=> Hình bạn tìm có bán kính là ".Circle::findShape("Hình tròn 3");
+echo "<br> Resize tăng bán kính 10 lần hình tròn có tên Hình tròn 3: <br>";
+$circle3->resize(10);
+echo "<br> Hình tròn 3 có diện tích mới là: <br>";
+echo floor($circle3->getArea());
+echo "<br> Hình tròn 3 có diện tích mới là: <br>";
+echo floor($circle3->getPerimeter());
+
 
 echo "<br><br>---------------------Hình trụ-----------------------<br><br>";
 

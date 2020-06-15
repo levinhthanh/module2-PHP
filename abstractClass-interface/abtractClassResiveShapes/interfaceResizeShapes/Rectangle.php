@@ -71,6 +71,7 @@ class Rectangle extends Shape implements Resizeable
     }
     public function resize($rate)
     {
-        $this->radius = $this->radius * $rate;
+        $this->width = $this->width * $rate;
+        $this->height = $this->height * $rate;
     }
 }
