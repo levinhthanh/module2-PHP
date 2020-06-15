@@ -10,7 +10,7 @@ class Stack{
     }
     public function push($data){
         $len = count($this->stack);
-        if($len < 20)
+        if($len < $this->limit)
         {
             array_unshift($this->stack, $data);
         } 
