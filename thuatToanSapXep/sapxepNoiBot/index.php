@@ -1,6 +1,6 @@
 <?php
 
-$array = [9, 1, 7, 6, 5, 4, 3, 2, 1, 3, 2, 1,5,676,9,34,56,789,2455];
+$array = [9, 1, 7, 6, 5, 4, 3, 2, 1, 3, 2, 1, 5, 676, 9, 34, 56, 789, 2455];
 
 bubbleSort($array);
 
@@ -8,12 +8,8 @@ for ($i = 0; $i < count($array); $i++) {
     echo $array[$i] . " ";
 }
 
-
-
-
-function bubbleSort($array)
+function bubbleSort(&$array)
 {
-    global $array;
     $count = count($array);
     for ($i = 0; $i < $count - 1; $i++) {
         $check = true;
@@ -26,13 +22,7 @@ function bubbleSort($array)
             }
         }
         if ($check) {
-            return $array;
+            break;
         }
     }
-    return $array;
 }
-
-
-
-
-
