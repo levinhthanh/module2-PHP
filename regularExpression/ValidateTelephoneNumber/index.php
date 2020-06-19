@@ -2,7 +2,7 @@
 $telenumEmpty = "";
 $telenumError =  "";
 $telenum = "";
-$checkTelenum = "/^[(]{1}[0-9]{2}[)]{1}[-]{1}[(]{1}[0]{1}[0-9]{9}[)]{1}$/";
+$checkTelenum = "/^\([0-9]{2}\)\-\(0[0-9]{9}\)$/";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($_POST['telenum'])) {
