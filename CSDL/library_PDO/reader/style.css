@@ -1,0 +1,52 @@
+.container{
+    width: 800px;
+    border: solid 1px black;
+    padding: 20px;
+    box-shadow: cadetblue 5px 5px 5px 5px;
+    margin: auto;
+}
+a{
+    margin: 5px;
+    margin-bottom: 20px;
+}
+#title{
+    border-bottom: solid 2px rosybrown;
+}
+#tools,#form{
+    border-bottom: solid 1px black;
+}
+#h1-2{
+    color: darkorange;
+}
+table,th,td{
+    border: solid 1px black;
+    padding-left: 10px;
+}
+table{
+    padding-left: 0px;
+}
+th{
+    background-color: darkgray;
+}
+#ma_loai{
+    width: 100px;
+}
+#ten_loai{
+    width: 300px;
+}
+#them_xoa_loai{
+    width: 300px;
+}
+#footer{
+    text-align: right;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#ma_loai_moi{
+    width: 200px;
+}
+#ten_loai_moi{
+    width: 200px;
+    padding-left: 0px;
+    text-align: center;
+}
